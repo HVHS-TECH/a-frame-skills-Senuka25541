@@ -14,9 +14,12 @@
             <a-cylinder color="blue" height="4"
                     top-radius="2" bottom-radius="2"
                     animation="
-                    property:
-                    from:
-                    to:
+                    property:position;
+                    from: -4 0 -22;
+                    to: 4 2 -8;
+                    dur: 2000;
+                    loop: true;
+                    dir:alternate
                     "
             ></a-cylinder>
          
@@ -38,6 +41,7 @@
             <a-box position="0 2 -23" height="4" width="10"
                     color="orange" depth=".5">
             </a-box>
+
         </a-scene>
     </body>
 </html>
