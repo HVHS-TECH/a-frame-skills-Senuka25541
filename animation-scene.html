@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-    <title>Orbit Example</title>
-  </head>
-  <body>
-    <a-scene>
-      <!-- Background -->
-      <a-sky color="black"></a-sky>
+<head>
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <title>Orbit Example</title>
+</head>
 
-      <!-- Sun -->
-      <a-sphere position="0 2 -4" color="yellow" radius="0.7"></a-sphere>
+<body>
+<a-scene>
 
-      <!-- Earth orbiting Sun -->
-      <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear">
-        <a-sphere position="3 0 0" color="blue" radius="0.3">
-          
-          <!-- Moon orbiting Earth -->
-          <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 2000; easing: linear">
-            <a-sphere position="0.6 0 0" color="grey" radius="0.1"></a-sphere>
-          </a-entity>
+  <!-- Background -->
+  <a-sky color="black"></a-sky>
 
-        </a-sphere>
+  <!-- Sun -->
+  <a-sphere position="0 2 -4" color="yellow" radius="0.7"></a-sphere>
+
+  <!-- Earth orbit system centered on the Sun -->
+  <a-entity position="0 2 -4"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear">
+
+    <!-- Earth -->
+    <a-sphere position="3 0 0" color="blue" radius="0.3">
+
+      <!-- Moon orbiting Earth -->
+      <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 2000; easing: linear">
+
+        <a-sphere position="0.6 0 0" color="grey" radius="0.1"></a-sphere>
+
       </a-entity>
 
-    </a-scene>
-  </body>
+    </a-sphere>
+
+  </a-entity>
+
+</a-scene>
+</body>
 </html>
